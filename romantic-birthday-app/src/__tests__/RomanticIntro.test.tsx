@@ -44,8 +44,6 @@ describe("RomanticIntro", () => {
     act(() => {
       vi.advanceTimersByTime(200); // 4 characters at 50ms each
     });
-    const paragraph = screen.getByRole("paragraph") ?? document.querySelector("[aria-live]");
-    // Some text should be visible but not the full intro
     const text = document.querySelector("[aria-live]")?.textContent ?? "";
     expect(text.length).toBeGreaterThan(0);
   });
