@@ -47,21 +47,20 @@ function BirthdayWish({ onNext }: BirthdayWishProps) {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 max-w-2xl w-full text-center space-y-8">
-        <h1 className="font-['Playfair_Display'] text-4xl sm:text-5xl md:text-6xl text-pink-700 leading-tight drop-shadow-sm">
-          Happy Birthday My Love ❤️
+      <div className="relative z-10 w-full max-w-lg text-center space-y-6 px-2">
+        <h1 className="font-['Playfair_Display'] text-3xl sm:text-5xl md:text-6xl text-pink-700 leading-tight drop-shadow-sm">
+          Happy 18th Birthday Maira ❤️
         </h1>
 
-        <p className="font-['Poppins'] text-base sm:text-lg text-purple-700 leading-relaxed">
-          Today the whole universe is celebrating you — the most wonderful, radiant, and
-          irreplaceable person in my life. Every laugh we've shared, every quiet moment,
-          every adventure — they all lead back to you. On this special day, I want you to
-          know that you are deeply, endlessly loved. Here's to you, my love. Happy Birthday. 🎂✨
+        <p className="font-['Poppins'] text-sm sm:text-lg text-purple-700 leading-relaxed">
+          18 years ago, the world became a much more beautiful place. Today we celebrate
+          you — your laugh, your heart, your everything. From the moment we met on March 17th,
+          you've made every single day feel like a gift. Here's to you, Maira. Happy Birthday, my love. 🎂✨
         </p>
 
         <button
           onClick={onNext}
-          className="mt-4 px-8 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-['Playfair_Display'] text-lg shadow-lg hover:from-pink-500 hover:to-purple-500 hover:shadow-pink-300/50 hover:shadow-xl transition-all duration-300"
+          className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-['Playfair_Display'] text-lg shadow-lg active:scale-95 hover:from-pink-500 hover:to-purple-500 transition-all duration-300"
         >
           Continue
         </button>

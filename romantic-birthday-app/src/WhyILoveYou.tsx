@@ -19,18 +19,17 @@ function WhyILoveYou({ onNext }: WhyILoveYouProps) {
   const selectedData = cards.find((c) => c.label === selectedCard) ?? null;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-br from-pink-100 via-purple-50 to-pink-50">
-      <div className="max-w-2xl w-full text-center space-y-8">
-        <h1 className="font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl text-pink-700 leading-tight">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-10 bg-gradient-to-br from-pink-100 via-purple-50 to-pink-50">
+      <div className="w-full max-w-lg text-center space-y-6">
+        <h1 className="font-['Playfair_Display'] text-2xl sm:text-4xl text-pink-700 leading-tight">
           Why I Love You
         </h1>
 
-        <p className="font-['Poppins'] text-base text-purple-500">
+        <p className="font-['Poppins'] text-sm text-purple-500">
           Tap a card to discover a reason ✨
         </p>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5">
           {cards.map((card) => (
             <LoveCard
               key={card.label}
@@ -41,20 +40,18 @@ function WhyILoveYou({ onNext }: WhyILoveYouProps) {
           ))}
         </div>
 
-        {/* Selected message */}
         {selectedData && (
-          <div className="rounded-2xl bg-white/80 backdrop-blur-sm border border-pink-200 shadow-lg px-6 py-5">
-            <p className="font-['Poppins'] text-base sm:text-lg text-purple-700 leading-relaxed">
+          <div className="rounded-2xl bg-white/80 backdrop-blur-sm border border-pink-200 shadow-lg px-4 py-4">
+            <p className="font-['Poppins'] text-sm sm:text-base text-purple-700 leading-relaxed">
               {selectedData.message}
             </p>
           </div>
         )}
 
-        {/* Continue button — only when a card is selected */}
         {selectedCard !== null && (
           <button
             onClick={onNext}
-            className="mt-2 px-8 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-['Playfair_Display'] text-lg shadow-lg hover:from-pink-500 hover:to-purple-500 hover:shadow-pink-300/50 hover:shadow-xl transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 text-white font-['Playfair_Display'] text-lg shadow-lg active:scale-95 hover:from-pink-500 hover:to-purple-500 transition-all duration-300"
           >
             Continue
           </button>

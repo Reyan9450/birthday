@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Remove 300ms tap delay on mobile */
+* {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -25,9 +25,9 @@ function LoveCard({ data, onSelect, isSelected }: LoveCardProps) {
     <button
       onClick={handleClick}
       className={[
-        "flex flex-col items-center justify-center gap-3 p-6 rounded-2xl cursor-pointer select-none",
+        "flex flex-col items-center justify-center gap-2 p-4 sm:p-6 rounded-2xl cursor-pointer select-none w-full",
         "bg-white/70 backdrop-blur-sm shadow-md border border-pink-100",
-        "hover:scale-105 hover:shadow-xl transition-all duration-300",
+        "active:scale-95 hover:scale-105 hover:shadow-xl transition-all duration-300",
         isSelected ? "ring-2 ring-pink-400 bg-pink-50/80" : "",
         clicked ? "scale-95" : "",
       ]
@@ -36,17 +36,12 @@ function LoveCard({ data, onSelect, isSelected }: LoveCardProps) {
       style={clicked ? { transform: "scale(0.95)" } : undefined}
       aria-pressed={isSelected}
     >
-      <span className="text-5xl" aria-hidden="true">
+      <span className="text-4xl sm:text-5xl" aria-hidden="true">
         {data.emoji}
       </span>
-      <span className="font-['Playfair_Display'] text-lg text-pink-700 font-semibold">
+      <span className="font-['Playfair_Display'] text-sm sm:text-lg text-pink-700 font-semibold leading-tight">
         {data.label}
       </span>
-      {isSelected && (
-        <p className="font-['Poppins'] text-sm text-purple-600 leading-relaxed text-center mt-1">
-          {data.message}
-        </p>
-      )}
     </button>
   );
 }

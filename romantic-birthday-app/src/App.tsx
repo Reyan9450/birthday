@@ -6,7 +6,6 @@ import PageTransition from './PageTransition'
 import HeartMiniGame from './HeartMiniGame'
 import RomanticIntro from './RomanticIntro'
 import FirstMeeting from './FirstMeeting'
-import FavoriteMemory from './FavoriteMemory'
 import WhyILoveYou from './WhyILoveYou'
 import LoveLetters from './LoveLetters'
 import BirthdayWish from './BirthdayWish'
@@ -17,7 +16,7 @@ function App() {
   const [currentSection, setCurrentSection] = useState(0)
   const [loading, setLoading] = useState(true)
 
-  const onNext = () => setCurrentSection(prev => Math.min(prev + 1, 8))
+  const onNext = () => setCurrentSection(prev => Math.min(prev + 1, 7))
 
   if (loading) {
     return <LoadingScreen onComplete={() => setLoading(false)} />
@@ -28,12 +27,11 @@ function App() {
       case 0: return <HeartMiniGame onNext={onNext} />
       case 1: return <RomanticIntro onNext={onNext} />
       case 2: return <FirstMeeting onNext={onNext} />
-      case 3: return <FavoriteMemory onNext={onNext} />
-      case 4: return <WhyILoveYou onNext={onNext} />
-      case 5: return <LoveLetters onNext={onNext} />
-      case 6: return <BirthdayWish onNext={onNext} />
-      case 7: return <RelationshipTimer onNext={onNext} />
-      case 8: return <FinalPage />
+      case 3: return <WhyILoveYou onNext={onNext} />
+      case 4: return <LoveLetters onNext={onNext} />
+      case 5: return <BirthdayWish onNext={onNext} />
+      case 6: return <RelationshipTimer onNext={onNext} />
+      case 7: return <FinalPage />
       default: return null
     }
   }

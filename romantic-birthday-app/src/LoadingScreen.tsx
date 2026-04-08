@@ -14,8 +14,8 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-pink-100 via-purple-100 to-lavender-100">
-      <span className="pulse-heart text-8xl select-none">❤️</span>
+    <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-pink-100 via-purple-100 to-pink-50">
+      <span className="pulse-heart text-7xl sm:text-8xl select-none">❤️</span>
     </div>
   );
 }

@@ -8,11 +8,11 @@ export interface AppConfig {
 }
 
 const config: AppConfig = {
-  recipientName: "My Love",
-  relationshipStartDate: "2022-01-01",
+  recipientName: "Maira",
+  relationshipStartDate: "2026-03-17",
   firstMeetingImage: "",
   musicSrc: "",
-  firstMeetingText: "It was a moment I'll never forget...",
+  firstMeetingText: "It was the 17th of March 2026 — the day I met you, and everything changed. I remember thinking, this person is something special. And I was right.",
   favoriteMemoryText: "That day we spent together...",
 };
 
