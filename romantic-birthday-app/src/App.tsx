@@ -10,13 +10,14 @@ import WhyILoveYou from './WhyILoveYou'
 import LoveLetters from './LoveLetters'
 import BirthdayWish from './BirthdayWish'
 import RelationshipTimer from './RelationshipTimer'
+import BirthdayPoem from './BirthdayPoem'
 import FinalPage from './FinalPage'
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0)
   const [loading, setLoading] = useState(true)
 
-  const onNext = () => setCurrentSection(prev => Math.min(prev + 1, 7))
+  const onNext = () => setCurrentSection(prev => Math.min(prev + 1, 8))
 
   if (loading) {
     return <LoadingScreen onComplete={() => setLoading(false)} />
@@ -31,7 +32,8 @@ function App() {
       case 4: return <LoveLetters onNext={onNext} />
       case 5: return <BirthdayWish onNext={onNext} />
       case 6: return <RelationshipTimer onNext={onNext} />
-      case 7: return <FinalPage />
+      case 7: return <BirthdayPoem onNext={onNext} />
+      case 8: return <FinalPage />
       default: return null
     }
   }
